@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: Comtech Rename SP Folder
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: https://prod-06.usgovtexas.logic.azure.us
+paths:
+  /workflows/159d391a80af46469c7d3df8beadc577/triggers/manual/paths/invoke:
+    post:
+      summary: Comtech Rename SP Folder
+      description: Comtech Rename SP Folder
+      operationId: comtechRenameSpFolder
+      parameters:
+        - name: api-version
+          in: query
+          schema:
+            type: string
+            example: '2016-06-01'
+        - name: sp
+          in: query
+          schema:
+            type: string
+            example: '/triggers/manual/run'
+        - name: sv
+          in: query
+          schema:
+            type: string
+            example: '1.0'
+        - name: sig
+          in: query
+          schema:
+            type: string
+            example: ebQfHw6TQe7VSap2zHJMvT6MbIo6b1MINeJ7nc5-TuM
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                titleNewValue:
+                  type: string
+                  example: RyanTest1
+                titleOldValue:
+                  type: string
+                  example: RyanTest123
+            example:
+              titleNewValue: RyanTest1
+              titleOldValue: RyanTest123
+      responses:
+        '200':
+          description: ''
+tags: []
