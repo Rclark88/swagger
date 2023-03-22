@@ -1,0 +1,70 @@
+{
+  "info": {
+    "title": "Comtech Rename SP Folder",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "paths": {
+    "/workflows/159d391a80af46469c7d3df8beadc577/triggers/manual/paths/invoke": {
+      "post": {
+        "summary": "Comtech Rename SP Folder",
+        "description": "Comtech Rename SP Folder",
+        "operationId": "comtechRenameSpFolder",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sp",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sv",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sig",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "titleNewValue": {
+                  "type": "string",
+                  "example": "RyanTest1"
+                },
+                "titleOldValue": {
+                  "type": "string",
+                  "example": "RyanTest123"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "consumes": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "swagger": "2.0",
+  "host": "prod-06.usgovtexas.logic.azure.us",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/"
+}
