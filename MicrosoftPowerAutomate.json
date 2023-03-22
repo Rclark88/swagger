@@ -82,17 +82,13 @@
 			"description": "Model for Body payload to POST to Flow, manipulated to look good in K2",
 			"required": ["serialNumber"],
 			"properties": {
-				"channelMessage": {
+				"titleOldValue": {
 					"type": "string",
-					"x-example": "Test from Postman"
+					"x-example": "Original Title"
 				},
-				"serialNumber": {
+				"titleNewValue": {
 					"type": "string",
-					"x-example": "12_34"
-				},
-				"originatorEmail": {
-					"type": "string",
-					"x-example": "user@domain.com"
+					"x-example": "New Title"
 				}
 			}
 		}
